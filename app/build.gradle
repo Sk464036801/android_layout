@@ -1,12 +1,14 @@
 apply plugin: 'android'
-
 android {
     compileSdkVersion 17
-    buildToolsVersion "19.0.3"
+    buildToolsVersion '19.0.3'
 
     defaultConfig {
         minSdkVersion 17
         targetSdkVersion 17
+
+        testPackageName "com.android.layout.tests"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
     }
 
     buildTypes {
@@ -15,4 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+}
+
+dependencies {
+    compile files('libs/xUtils-1.9.8.jar')
+    compile files('libs/gson-2.2.4.jar')
+    compile project(':lib')
 }

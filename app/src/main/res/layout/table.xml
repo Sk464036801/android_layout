@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--
+        在TableLayout布局中，一个列的宽度由该列中那个最宽的那个单元格指定，而表格的宽度由父
+        容器指定。在TableLayout中，可以为列设置三种属性。
+        Shrinkable：如果一个列被标识为Shrinkable,则该列的宽度可以进行收缩，以使表格能够适
+        应其父容器的大小。
+        Stretchable:如果一个列被标为Sretchable,则该列的宽度可以进行拉伸，以使填满表格中
+        的空闲空间。
+        Collapsed:如果一个列被标识为Collapsed,则该列会隐藏。
+        注意：一个列可以同时具有Shrinkable属性和Shretchable属性，在这种情况下，该列的宽度可
+        以任意拉伸或者收缩来适应父容器。
+
+        android:collapseColumns 设置指定列号为Collapsed
+        android:shrinkColumns 设置指定列号为Shrinkable
+        android:stetchColumns 设置指定列号为Stretchable
+        注意：
+        在TableLayout中所谓的列号是从0开始的。
+        setShrinkAllColumns和setStretchAllColumns实现功能是将表格中所有的列设置为
+        Shrinkable 或者 Stretchable。
+    -->
+
+    <TableLayout
+        android:id="@+id/tablelayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:stretchColumns="0">
+
+        <TableRow
+            android:id="@+id/tablerow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fd8d8d"
+                android:padding="10px"
+                android:text="TableLayout使用示例"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tablelayout2"
+        android:stretchColumns="0,1,2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/tablerow20"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:text="Button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:text="Button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tablerow21"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:text="Button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:text="Button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tablerow22"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Button1"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:text="Button1"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:text="Button1"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </TableRow>
+
+
+        </TableLayout>
+
+
+
+</LinearLayout>

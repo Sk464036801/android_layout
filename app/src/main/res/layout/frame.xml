@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <!--
+        框架布局是最简单的布局，所有添加的到这个布局中的视图都以层叠方式显示。第一个添加的
+        到框架布局的视图显示在最底层，最后一个被放在最顶层，上一层视图会覆盖下一层的视图，
+        因此框架布局类似堆棧布局。
+        top－>顶端
+        buttom->底端
+        Left -> 屏幕左侧
+        Right -> 屏幕右侧
+        center_vertical －> 垂直方向居中
+        horizontal_vertical -> 水平方向居中
+    -->
+
+    <ImageView
+        android:background="@drawable/p_1"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:background="@drawable/p_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginTop="70dp"
+        android:background="@drawable/p_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>
