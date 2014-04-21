@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+    <!--
+    资源文件的获取方式：
+    strings.xml -> getResource().getString(resourceId);
+                   或者getResource().getText(resourceId);
+    arrays.xml -> getResource().getStringArray(resourceId);
+    colors.xml -> getResource().getDarwable(resourceId)或者getResource().getColor(resourceId);
+    dimens.xml -> getResource().getDemension(resourceId)
+    styles.xml 不用获取值，可以直接在布局文件中使用
+    -->
+
 <resources>
     <string name="app_name">android_layout</string>
     <string name="button1">button1</string>
